@@ -19,6 +19,7 @@ For the following questions, use the [JSON Placeholder API](https://jsonplacehol
 5. This database has 200 `todos`. Write a function called `getCompletedTasks` that logs an array of all of the completed tasks.
 
 6. Write a function, `displayPhotos`, that displays a grid of 9 photos in the browser.
+--Struggle
 
 7. **Challenge**: Write a function, `findClosest`, that logs the user that is geographically closest to where you are currently sitting.
 
