@@ -55,13 +55,22 @@ function getBizUsers() {
                 console.log(finalArray)
             })
         }
-    // function displayPhotos() {
-    //     fetch(`https://jsonplaceholder.typicode.com/photos`)
-    //         .then(response => response.json())
-    //         .then(array => {
-    //             document.getElementById("photo").innerHTML = `"https://via.placeholder.com/600/92c952"`;
-    //         })
-    // }
+        function displayPhotos() {
+            let photoLimiter = 0
+            fetch('https://jsonplaceholder.typicode.com/photos')
+            .then(response => response.json())
+            .then(array => {
+               const arrMap = array.map(obj => {
+                if(photoLimiter !== 10){
+                    photoLimiter++
+                const image = document.createElement('img')
+                image.src = `${obj.url}`
+                document.querySelector("div").appendChild((image))
+                }
+               })   
+                }
+            )
+        }
         function numOfLongPosts() {
             let count = 0
             fetch(`https://jsonplaceholder.typicode.com/posts`)
